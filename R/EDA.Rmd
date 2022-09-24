@@ -1,0 +1,24 @@
+---
+title: "EDA"
+author: "Lucas Cardoso Polak"
+date: "17/10/2021"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+  word_document: default
+---
+
+# EDA dos dados
+
+## Libraries
+
+```{r Bibliotecas, message=FALSE}
+library(tidyr)
+library(dplyr)
+library(reshape2)
+library(factoextra) # visualização de clusters
+library(dbscan)
+library(cluster)
+source("functions.R") # minhas funções definidas em um arquivo a parte
+```
