@@ -94,7 +94,9 @@ View(df_pivot_filtered)
 
 df_pivot_filtered <-df_pivot_filtered %>% mutate_all(~ifelse(is.na(.x), mean(.x, na.rm = TRUE), .x))    
 
+write.csv(df_pivot_filtered, '../data/data_cleaned_fillna.csv')
 
+View(df_pivot_filtered)
 
 df_pivot_filtered_scaled <- as.data.frame(scale(df_pivot_filtered[, c(3:ncol(df_pivot_filtered))]))
 
